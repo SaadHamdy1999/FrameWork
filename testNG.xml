@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite parallel="tests" name="Fame" thread-count="4" verbose="0">
+    <test name="Test1" preserve-order="true">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="UserRegistrationWithCSVFile"/>
+        </classes>
+    </test>
+
+
+</suite>

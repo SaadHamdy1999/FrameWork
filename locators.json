@@ -1,0 +1,49 @@
+[
+
+  {
+    "name" : "RegisterLink" ,
+    "value" : "Register",
+    "type" : "linkText"
+  },
+  {
+    "name" : "firstNameBox" ,
+    "value" : "FirstName",
+    "type" : "id"
+  },
+  {
+    "name" : "lastNameBox" ,
+    "value" : "LastName",
+    "type" : "id"
+  },
+  {
+    "name" : "emailBox" ,
+    "value" : "Email",
+    "type" : "id"
+  },
+  {
+    "name" : "passwordBox" ,
+    "value" : "Password",
+    "type" : "id"
+  },
+  {
+    "name" : "confirmPasswordBox" ,
+    "value" : "ConfirmPassword",
+    "type" : "id"
+  },
+  {
+    "name" : "genderBtn" ,
+    "value" : "gender",
+    "type" : "id"
+  },
+  {
+    "name" : "registerBtn" ,
+    "value" : "register-button",
+    "type" : "id"
+  },
+  {
+    "name" : "resultMessage" ,
+    "value" : "result",
+    "type" : "className"
+  }
+
+]

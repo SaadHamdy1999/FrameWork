@@ -1,0 +1,39 @@
+2022-06-07 19:01:13,459 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis opened successfully
+2022-06-07 19:01:21,222 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis closed successfully
+2022-06-07 19:01:23,218 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis opened successfully
+2022-06-07 19:01:27,818 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis closed successfully
+2022-06-07 19:01:29,968 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis opened successfully
+2022-06-07 19:01:35,159 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis closed successfully
+2022-06-07 19:03:29,112 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis opened successfully
+2022-06-07 19:03:34,856 +0200 [TestNG-tests-1] ERROR (MyLogger.java:16) - no such element: Unable to locate element: {"method":"css selector","selector":".result"}
+  (Session info: chrome=102.0.5005.63)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SAAD', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64b7490df810eb836607bed89dbbca7f, findElement {using=css selector, value=.result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63817}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63817/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 64b7490df810eb836607bed89dbbca7f
+2022-06-07 19:03:35,284 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis closed successfully
+2022-06-07 19:03:37,460 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis opened successfully
+2022-06-07 19:03:41,876 +0200 [TestNG-tests-1] ERROR (MyLogger.java:16) - no such element: Unable to locate element: {"method":"css selector","selector":".result"}
+  (Session info: chrome=102.0.5005.63)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SAAD', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dc59ad5bd4561a4ed73a8deab8aa7010, findElement {using=css selector, value=.result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63845}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63845/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dc59ad5bd4561a4ed73a8deab8aa7010
+2022-06-07 19:03:44,076 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis closed successfully
+2022-06-07 19:03:46,106 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis opened successfully
+2022-06-07 19:03:50,101 +0200 [TestNG-tests-1] ERROR (MyLogger.java:16) - no such element: Unable to locate element: {"method":"css selector","selector":".result"}
+  (Session info: chrome=102.0.5005.63)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'SAAD', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7a9417892c22eafcd8e0b3f07ed28ae5, findElement {using=css selector, value=.result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63877}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63877/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7a9417892c22eafcd8e0b3f07ed28ae5
+2022-06-07 19:03:50,817 +0200 [TestNG-tests-1] DEBUG (MyLogger.java:13) - UserRegistrationWithCSVFileis closed successfully
