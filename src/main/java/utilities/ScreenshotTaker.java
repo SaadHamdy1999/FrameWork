@@ -8,8 +8,8 @@ import java.io.IOException;
 import static actions.BrowserActions.drivers;
 
 public class ScreenshotTaker {
-    public void takeScreenShot(String testCaseName,String driverUniqueIdentifier){
-        var camera =(TakesScreenshot)drivers.get(driverUniqueIdentifier);
+    public void takeScreenShot(String testCaseName){
+        var camera =(TakesScreenshot)drivers.get();
         File screenShot =camera.getScreenshotAs(OutputType.FILE);
         try {
             Files.move(screenShot, new File(("resources/screenshots/") +testCaseName+".png"));

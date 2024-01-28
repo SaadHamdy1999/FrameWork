@@ -1,37 +1,41 @@
 package actions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import java.util.HashMap;
 import java.util.Map;
 
 public class BrowserActions {
 
-    public static Map <String, WebDriver> drivers = new HashMap<>();
-    public static void setUpDriver(String DriverType, String DriverIdentifier) {
+    public static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+    public static void setUpDriver(String DriverType) {
         switch (DriverType.toLowerCase()) {
             case "chrome" -> {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
-                drivers.put(DriverIdentifier, new ChromeDriver());
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--remote-allow-origins=*");
+                drivers.set(new ChromeDriver(options));
             }
             case "firefox" -> {
-                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
-                drivers.put(DriverIdentifier, new FirefoxDriver());
+                WebDriverManager.firefoxdriver().setup();
+                drivers.set( new FirefoxDriver());
             }
-            case "ie" -> {
-                System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "/drivers/IEDriverServer.exe");
-                drivers.put(DriverIdentifier, new InternetExplorerDriver());
+            case "edge" -> {
+                WebDriverManager.edgedriver().setup();
+                drivers.set( new EdgeDriver());
             }
         }
-        drivers.get(DriverIdentifier).manage().window().maximize();
+        drivers.get().manage().window().maximize();
     }
-    public static void goToURL(String URL, String DriverIdentifier){
-        drivers.get(DriverIdentifier).get(URL);
+    public static void goToURL(String URL){
+        drivers.get().get(URL);
     }
-    public static void tearDown(String DriverIdentifier){
-        drivers.get(DriverIdentifier).quit();
-        drivers.remove(DriverIdentifier);
+    public static void tearDown(){
+        drivers.get().quit();
+        drivers.remove();
     }
 
 }

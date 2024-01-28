@@ -3,8 +3,8 @@ package pages;
 import junit.framework.Assert;
 
 public class HomePage extends BasePage{
-    public HomePage(String driverUniqueIdentifier) {
-        super(driverUniqueIdentifier);
+    public HomePage() {
+        super();
     }
     public void clickOnRegistrationLink(){
         readLocator("RegisterLink");

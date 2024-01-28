@@ -10,21 +10,21 @@ public class BaseTest {
     MyLogger logger = new MyLogger();
     @Parameters("browser")
     @BeforeMethod
-    public void setUp(@Optional("chrome") String browser, ITestContext cxt) {
-        uniqueKey = cxt.getAllTestMethods()[0].getTestClass().getName();
-        //System.out.println(uniqueKey);
-        BrowserActions.setUpDriver(browser,uniqueKey);
+    public void setUp(@Optional("chrome") String browser) {
+        BrowserActions.setUpDriver(browser);
+        uniqueKey = Thread.currentThread().getName();
         logger.writeMessageInLogFile(uniqueKey + "is opened successfully");
 
-        BrowserActions.goToURL("https://demo.nopcommerce.com/",uniqueKey);
+        BrowserActions.goToURL("https://demo.nopcommerce.com/");
 
     }
 
 
     @AfterMethod
-    public void tearDown(ITestContext cxt){
+    public void tearDown(){
         //System.out.println(uniqueKey);
-        BrowserActions.tearDown(uniqueKey);
+        uniqueKey = Thread.currentThread().getName();
+        BrowserActions.tearDown();
         logger.writeMessageInLogFile(uniqueKey + "is closed successfully");
 
     }

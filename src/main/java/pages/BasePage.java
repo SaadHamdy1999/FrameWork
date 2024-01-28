@@ -14,10 +14,10 @@ public class BasePage {
     UIActions uiActions;
     Assertions assertions;
     MyLogger logger;
-    public BasePage(String driverUniqueIdentifier)
+    public BasePage()
     {
-        uiActions = new UIActions(driverUniqueIdentifier);
-        assertions = new Assertions(driverUniqueIdentifier);
+        uiActions = new UIActions();
+        assertions = new Assertions();
         logger = new MyLogger();
     }
     protected void readLocator(String name){

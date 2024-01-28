@@ -13,9 +13,9 @@ public class UIActions {
     Select select;
     Actions actions;
     MyLogger logger;
-    public UIActions(String DriverIdentifier)
+    public UIActions()
     {
-        driver= drivers.get(DriverIdentifier);
+        driver= drivers.get();
         jse =(JavascriptExecutor)driver;
         actions = new Actions(driver);
         logger = new MyLogger();
@@ -184,7 +184,9 @@ public class UIActions {
 
         return element;
     }
-
+    public String getElementText(String selector, locatorType locatorType) {
+        return locateElementByENUM(selector, locatorType).getText();
+    }
 
     public enum locatorType{
         XPATH,

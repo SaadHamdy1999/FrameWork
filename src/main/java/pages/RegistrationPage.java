@@ -1,8 +1,8 @@
 package pages;
 
 public class RegistrationPage extends BasePage{
-    public RegistrationPage(String driverUniqueIdentifier) {
-        super(driverUniqueIdentifier);
+    public RegistrationPage() {
+        super();
     }
     public void register(String firstName, String lastname, String email, String password, String confirmPassword){
         clickOnGenderBtn();
@@ -54,8 +54,9 @@ public class RegistrationPage extends BasePage{
     }
     public void checkIfUserRegisteredSuccessfully(){
         readLocator("resultMessage");
-        assertions.assertOnElementText(locatorValueAndType[0],
-                convertTypefromStringToENUM(locatorValueAndType[1]),
+        String actualText =uiActions.getElementText(locatorValueAndType[0],
+                convertTypefromStringToENUM(locatorValueAndType[1]));
+        assertions.assertOnElementText(actualText,
                 "Your registration completed");
 
     }
