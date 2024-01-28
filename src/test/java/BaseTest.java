@@ -4,7 +4,7 @@ import org.testng.annotations.*;
 import utilities.DataReader;
 import utilities.MyLogger;
 
-
+@Listeners(utilities.Listeners.class)
 public class BaseTest {
     String uniqueKey;
     MyLogger logger = new MyLogger();
@@ -14,9 +14,7 @@ public class BaseTest {
         BrowserActions.setUpDriver(browser);
         uniqueKey = Thread.currentThread().getName();
         logger.writeMessageInLogFile(uniqueKey + "is opened successfully");
-
         BrowserActions.goToURL("https://demo.nopcommerce.com/");
-
     }
 
 

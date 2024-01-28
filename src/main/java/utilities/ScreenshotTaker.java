@@ -1,5 +1,5 @@
 package utilities;
-import com.google.common.io.Files;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
@@ -12,7 +12,7 @@ public class ScreenshotTaker {
         var camera =(TakesScreenshot)drivers.get();
         File screenShot =camera.getScreenshotAs(OutputType.FILE);
         try {
-            Files.move(screenShot, new File(("resources/screenshots/") +testCaseName+".png"));
+            FileUtils.copyFile(screenShot, new File(("src/main/resources/screenshots/") +testCaseName+".png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
