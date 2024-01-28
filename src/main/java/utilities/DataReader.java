@@ -5,8 +5,9 @@ import com.opencsv.exceptions.CsvException;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -100,6 +101,10 @@ public class DataReader {
         }
         return null;
     }
-
+public JSONObject readJsonFile (String filePath) throws FileNotFoundException {
+        InputStream is = new FileInputStream(filePath);
+        JSONTokener tok = new JSONTokener(is);
+        return new JSONObject(tok);
+}
 
 }

@@ -11,6 +11,7 @@ import java.util.Map;
 public class BrowserActions {
 
     public static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+    public static ThreadLocal<ApiActions> apiHandler= new ThreadLocal<>();
     public static void setUpDriver(String DriverType) {
         switch (DriverType.toLowerCase()) {
             case "chrome" -> {
@@ -28,6 +29,7 @@ public class BrowserActions {
                 drivers.set( new EdgeDriver());
             }
         }
+        apiHandler.set(new ApiActions());
         drivers.get().manage().window().maximize();
     }
     public static void goToURL(String URL){
